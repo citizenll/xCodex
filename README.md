@@ -1,12 +1,13 @@
 <div align="center">
 
 # xCodex
-
+<p align="center">
+  <img src="docs/xcodex-banner.png" alt="xCodex Mobile Connector" width="100%">
+</p>
 **面向真实工程工作流的桌面 AI 编码工作台**
 
 [官网](https://xcodex.app) • [文档](#) • [下载](#) • [English](./README_EN.md)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)]()
 [![Version](https://img.shields.io/badge/version-0.1.0-green)]()
 
@@ -71,60 +72,9 @@
 - 截图捕获和网页数据提取
 - 无缝的浏览器会话状态跟踪
 
----
-
-## 🛠️ 技术栈
-
-| 层级 | 技术 |
-|-------|-----------|
-| **前端** | Next.js 16 + React 19 + TypeScript |
-| **桌面外壳** | Tauri 2 |
-| **后端** | Rust + Tokio |
-| **协议** | `codex app-server` JSON-RPC over stdio |
-| **终端** | `portable-pty` + `xterm.js` |
-| **数据库** | SQLite (sqlx) |
-| **AI 辅助任务** | 复用用户配置的 Provider/Supplier/Model 路由 |
 
 ---
 
-## 🚀 快速开始
-
-### 前置要求
-
-- Node.js (v18+)
-- pnpm
-- Rust 工具链
-- 本地 `codex` 安装（或在设置中指定自定义二进制路径）
-
-### 安装
-
-```bash
-# 克隆仓库
-git clone https://github.com/citizenll/xcodex-app.git
-cd xcodex-app
-
-# 安装依赖
-pnpm install
-
-# 启动桌面开发环境
-pnpm tauri dev
-```
-
-### 生产构建
-
-```bash
-# 构建桌面应用
-pnpm tauri build
-
-# 运行验证测试
-pnpm typecheck
-pnpm build
-cargo check --manifest-path src-tauri/Cargo.toml
-pnpm smoke:logic
-pnpm smoke:release
-```
-
----
 
 ## 🎨 设计哲学
 
@@ -159,41 +109,7 @@ xCodex 最适合：
 - [ ] 工作区/线程状态的云同步（可选）
 - [ ] 团队协作功能
 
----
 
-## 📦 项目结构
-
-```
-app/                    # Next.js app router 页面
-components/             # React 组件
-  workspace-chat/       # 主聊天界面
-  composer-next/        # 富文本编辑器
-  ui/                   # 可复用 UI 原语
-hooks/                  # React hooks
-lib/                    # 共享工具
-  desktop-api.ts        # Tauri 命令包装器
-  composer-next/        # 编辑器文档模型
-src-tauri/              # Rust 后端
-  src/
-    app_server.rs       # 工作区会话管理
-    terminal.rs         # PTY 管理
-    symphony/           # 任务编排
-    browser_use.rs      # 浏览器集成
-docs/superpowers/specs/ # 功能规格
-tools/                  # 构建和测试脚本
-```
-
----
-
-## 🤝 贡献
-
-我们欢迎贡献！请查看我们的[贡献指南](#)了解详情。
-
----
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
 
 ---
 
@@ -201,8 +117,8 @@ tools/                  # 构建和测试脚本
 
 - **官网**：[xcodex.app](https://xcodex.app)
 - **文档**：[docs.xcodex.app](#)
-- **GitHub**：[github.com/citizenll/xcodex-app](https://github.com/citizenll/xcodex-app)
-- **问题反馈**：[报告 bug 或请求功能](https://github.com/citizenll/xcodex-app/issues)
+- **GitHub**：[github.com/citizenll/xcodex](https://github.com/citizenll/xcodex)
+- **问题反馈**：[报告 bug 或请求功能](https://github.com/citizenll/xcodex/issues)
 
 ---
 
